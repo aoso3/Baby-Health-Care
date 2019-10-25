@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ground"
+    tools:context=".vaccinations.VaccinationAdvActivity"
+    android:padding="5dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/list_item_layout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relativeLayout">
+                    <ImageView
+                        android:id="@+id/baby_profile_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/doctor_cover"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true" />
+
+                    <LinearLayout
+                        android:id="@+id/informations_container2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/baby_profile_cover"
+                        android:paddingTop="32dp"
+                        android:paddingBottom="32dp"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorPrimaryLight"
+                            android:id="@+id/adv_doctor"
+                            android:layout_marginBottom="16dp"
+                            android:textAlignment="center"
+                            android:padding="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorPrimaryLight"
+                            android:id="@+id/adv_vacc"
+                            android:layout_marginBottom="16dp"
+                            android:textAlignment="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/adv_text"
+                                android:layout_marginBottom="16dp"
+                                android:gravity="center"
+                                android:textAlignment="center"
+                                android:textSize="16dp"
+                                android:textColor="@color/colorPrimaryLight"
+                                />
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="16dp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/adv_from_age"
+                                    android:gravity="center"
+                                    android:textAlignment="center"
+                                    android:textSize="16dp"
+                                    android:textColor="@color/colorPrimaryLight"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/adv_to_age"
+                                    android:gravity="center"
+                                    android:textAlignment="center"
+                                    android:textSize="16dp"
+                                    android:textColor="@color/colorPrimaryLight"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/adv_price"
+                                android:layout_marginBottom="16dp"
+                                android:textAlignment="center"
+                                android:textSize="16dp"
+                                android:textColor="@color/colorPrimaryLight"
+                                />
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="16dp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/adv_activation_date"
+                                    android:gravity="center"
+                                    android:textAlignment="center"
+                                    android:textSize="16dp"
+                                    android:textColor="@color/colorPrimaryLight"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/adv_closed_date"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textAlignment="center"
+                                    android:textSize="16dp"
+                                    android:textColor="@color/colorPrimaryLight"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- cheat code: negative margin -->
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:src="@drawable/vaccination"
+                        android:layout_centerHorizontal="true"
+                        android:layout_above="@+id/informations_container2"
+                        android:layout_marginBottom="-16dp"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/colorPrimaryDark"
+                        android:id="@+id/adv_pic"
+                        android:layout_toLeftOf="@+id/adv_reg_btn"
+                        android:layout_marginRight="15dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/adv_reg_btn"
+                        android:textColor="@color/white"
+                        android:src="@drawable/good"
+                        android:background="@color/colorAccent"
+                        android:layout_alignBottom="@+id/adv_pic"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/baby_profile_cover"
+                        android:text="Register" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:id="@+id/adv_status"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="New Button"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:id="@+id/adv_reg_btn"-->
+                    <!--android:padding="10dp" />-->
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

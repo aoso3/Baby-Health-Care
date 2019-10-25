@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00bcd4</color>
+    <color name="colorPrimaryDark">#0097a7</color>
+    <color name="colorPrimaryLight">#b2ebf2</color>
+    <color name="colorAccent">#ff5252</color>
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#727272</color>
+    <color name="colorDivider">#b6b6b6</color>
+    <color name="ground">#f6f6f6</color>
+    <color name="boyColor">#428bca</color>
+    <color name="girlColor">#ea4c88</color>
+
+    <color name="chartColor1">#ce1919</color>
+    <color name="chartColor2">#ecd31b</color>
+    <color name="chartColor3">#24ea49</color>
+
+    <color name="great_rate">#3df908</color>
+    <color name="excellent_rate">#1bcf40</color>
+    <color name="very_good_rate">#24ea87</color>
+    <color name="good_rate">#83ea98</color>
+    <color name="ok_rate">#d6dc63</color>
+    <color name="bad_rate">#ea8c83</color>
+    <color name="very_bad_rate">#f23624</color>
+
+    <color name="doctor_cover">#114a7b</color>
+
+    <!-- My colors -->
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="bg_main">#428bca</color>
+    <color name="white">#ffffff</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+    <color name="primary_text_material_light">#212121</color>
+    <color name="secondary_text_material_light">#727272</color>
+</resources>

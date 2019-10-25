@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/relativeLayout">-->
+        <!--<ImageView-->
+            <!--android:id="@+id/header_imageview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:src="@drawable/coverv"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:adjustViewBounds="true" />-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/informations_container"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_below="@+id/header_imageview"-->
+            <!--android:paddingTop="32dp"-->
+            <!--android:paddingBottom="32dp"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:gravity="center">-->
+
+            <!--<Spinner-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:id="@+id/babies_list"-->
+                <!--android:layout_gravity="center_horizontal" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Child birth date"-->
+                <!--android:textColor="@color/colorPrimaryLight"-->
+                <!--android:id="@+id/baby_birth_view_txt" />-->
+
+        <!--</LinearLayout>-->
+
+        <!-- cheat code: negative margin -->
+
+        <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--android:layout_width="96dp"-->
+            <!--android:layout_height="96dp"-->
+            <!--android:src="@drawable/baby_avatar"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_above="@+id/informations_container"-->
+            <!--android:layout_marginBottom="-16dp"-->
+            <!--app:civ_border_width="2dp"-->
+            <!--app:civ_border_color="@color/colorPrimaryDark"-->
+            <!--android:id="@+id/view" />-->
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/edit_baby_prof_btn"-->
+            <!--android:src="@drawable/edit_ico"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:layout_alignBottom="@+id/view"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginRight="10dp" />-->
+    <!--</RelativeLayout>-->
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_sections_list"
+        android:layout_below="@+id/relativeLayout" />
+
+</RelativeLayout>

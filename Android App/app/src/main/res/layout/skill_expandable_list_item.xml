@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Medium Text"
+        android:textColor="@color/white"
+        android:layout_weight="3"
+        android:id="@+id/skills_expandable_list_skill" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:textColor="@color/white"
+        android:layout_weight="2"
+        android:id="@+id/skills_expandable_list_item_level"
+        android:textAlignment="center"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:id="@+id/skills_expandable_list_item_mark"
+        android:src="@drawable/good"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>

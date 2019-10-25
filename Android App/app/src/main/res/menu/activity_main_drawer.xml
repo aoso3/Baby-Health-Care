@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_account_circle"
+            android:title="@string/my_account" />
+        <item
+            android:id="@+id/nav_password"
+            android:icon="@drawable/ic_https"
+            android:title="@string/change_password" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_settings_power"
+            android:title="@string/log_out" />
+    </group>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_home"
+                android:title="@string/home" />
+            <!--<item-->
+                <!--android:id="@+id/nav_adv"-->
+                <!--android:icon="@drawable/ic_notifications"-->
+                <!--android:title="Doctors' Advertisements" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_req"-->
+                <!--android:icon="@drawable/ic_notifications"-->
+                <!--android:title="Confirmation requests" />-->
+        </menu>
+    </item>
+
+</menu>

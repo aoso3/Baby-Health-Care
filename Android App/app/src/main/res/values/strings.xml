@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">My Baby Helath Care</string>
+
+    <string name="title_activity_main">My Baby Health Care</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="name">Full Name</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="change_pic">Change Picture</string>
+    <string name="add_pic">Add Picture</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="food">Food</string>
+    <string name="date_of_tried">Date of tried</string>
+    <string name="baby_rate">Baby\'s rating</string>
+    <string name="note">Note</string>
+    <string name="date_of_note">Date of note</string>
+    <string name="food_note_hint">If your baby showed signs of an allergy to this food, note it here.</string>
+    <string name="food_status">Okay for your baby?</string>
+    <string name="food_status_hint">If it is been enough period and you haven\'t noticed any allergic reaction, you\'re in the clear. You can also make your baby\'s doctor take the decision by choosing pending.</string>
+    <string name="good_food">Good Food</string>
+    <string name="blocked_food">Blocked Food</string>
+    <string name="pending_food">Pending Food</string>
+    <string name="with_note">With note</string>
+    <string name="no_note">No note</string>
+    <string name="food_type_name">Food name</string>
+    <string name="food_samples">Samples</string>
+    <string name="show_samples">Show Samples</string>
+    <string name="quantity_age">Age</string>
+    <string name="quantity_weeks">Weeks</string>
+    <string name="quantity_measurement">Measurement</string>
+    <string name="new_sample">New sample</string>
+    <string name="edit_sample">Edit Sample</string>
+    <string name="add_baby">Add new baby</string>
+    <string name="baby_profile">Baby\'s profile</string>
+    <string name="food_type_details">Food type\'s details</string>
+    <string name="new_food_type">New food type</string>
+    <string name="new_food_type_sample">New sample</string>
+    <string name="food_type_sample_details">Sample\'s details</string>
+    <string name="sleep_chart">Sleep chart</string>
+    <string name="growth_chart">Growth chart</string>
+    <string name="samples">Samples</string>
+    <string name="date">Date</string>
+    <string name="months">Months</string>
+    <string name="avg_sleep_time">Average sleep time in the day</string>
+    <string name="hours">Hours</string>
+    <string name="new_vaccination_notification_title">New vaccination in this age</string>
+    <string name="new_vaccination_notification_text">You should take a look about new vaccinations for</string>
+    <string name="str_new">New</string>
+
+    <!-- Main Menu -->
+    <string name="my_account">My Account</string>
+    <string name="home">Home</string>
+    <string name="log_out">Logout</string>
+    <string name="change_password">Change Password</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

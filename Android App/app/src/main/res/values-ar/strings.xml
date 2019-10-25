@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">الرعاية الصحية لطفلي</string>
+
+    <string name="title_activity_main">الرعاية الصحية لطفلي</string>
+
+    <string name="email">البريد الالكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="old_password">كلمة المرور الحالية</string>
+    <string name="new_password">كلمة المرور الجديدة</string>
+    <string name="name">الاسم الكامل</string>
+    <string name="birth_date">تاريخ الميلاد</string>
+    <string name="gender">الجنس</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إغلاق</string>
+    <string name="change_pic">تغيير الصورة</string>
+    <string name="add_pic">إضافة صورة</string>
+    <string name="login">تسجيل دخول</string>
+    <string name="register">إنشاء حساب</string>
+    <string name="btn_link_to_register">لست عضواً؟ أنشئ حساباً الآن.</string>
+    <string name="btn_link_to_login">لديك حساب؟ تسجيل الدخول.</string>
+    <string name="food">اسم الوجبة</string>
+    <string name="date_of_tried">تاريخ التناول</string>
+    <string name="baby_rate">تقييم الطفل</string>
+    <string name="note">ملاحظات</string>
+    <string name="date_of_note">تاريخ الملاحظات</string>
+    <string name="food_note_hint">إذا أظهر طفلك علامات حساسية هذا الطعام، اذكرها هنا.</string>
+    <string name="food_status">جيد لطفلك؟</string>
+    <string name="food_status_hint">إذا مضت فترة كافية بعد تناول الوجبة و لم تظهر أي علامات تحسس فالوضع جيد. يمكنك جعل طبيبك يقرر أيضاً باختيار وضع الانتظار..</string>
+    <string name="good_food">الوجبات الجيدة</string>
+    <string name="blocked_food">الوجبات المحظورة</string>
+    <string name="pending_food">غير مقرر</string>
+    <string name="with_note">مع ملاحظة</string>
+    <string name="no_note">لا يوجد ملاحظة</string>
+    <string name="food_type_name">اسم النوع</string>
+    <string name="food_samples">عينات المراقبة</string>
+    <string name="show_samples">مشاهدة العينات</string>
+    <string name="quantity_age">العمر</string>
+    <string name="quantity_weeks">أسابيع</string>
+    <string name="quantity_measurement">القياس</string>
+    <string name="new_sample">عينة جديدة</string>
+    <string name="edit_sample">تعديل عينة</string>
+    <string name="add_baby">إضافة طفل جديد</string>
+    <string name="baby_profile">ملف الطفل</string>
+    <string name="food_type_details">تفاصيل وجبة طعام</string>
+    <string name="new_food_type">نوع طعام جديد</string>
+    <string name="new_food_type_sample">عينة جديدة</string>
+    <string name="food_type_sample_details">تفاصيل عينة</string>
+    <string name="sleep_chart">المخطط البياني للنوم</string>
+    <string name="growth_chart">المخطط البياني للنمو</string>
+    <string name="samples">العينات</string>
+    <string name="date">التاريخ</string>
+    <string name="months">أشهر</string>
+    <string name="avg_sleep_time">متوسط كمية النوم خلال اليوم</string>
+    <string name="hours">ساعات</string>
+    <string name="new_vaccination_notification_title">لقاح جديد في هذا العمر</string>
+    <string name="new_vaccination_notification_text">ينصح بالاطلاع على لقاحات جديدة من أجل</string>
+    <string name="str_new">جديد</string>
+    <!-- Main Menu -->
+    <string name="my_account">حسابي</string>
+    <string name="home">الرئيسية</string>
+    <string name="log_out">تسجيل خروج</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">الإعدادات</string>
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+
+    android:touchscreenBlocksFocus="false"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Food"
+        android:id="@+id/food_sample_item_name"
+        android:layout_weight="2"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:padding="2dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Date"
+        android:singleLine="true"
+        android:layout_weight="2"
+        android:id="@+id/food_sample_item_date"
+        android:textAlignment="viewStart"
+        android:padding="2dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Note"
+        android:singleLine="true"
+        android:id="@+id/food_sample_item_note"
+        android:layout_weight="2"
+        android:textAlignment="viewStart"
+        android:padding="2dp" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:id="@+id/food_sample_item_rate"
+        android:layout_weight="1"
+        android:src="@drawable/yum" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:id="@+id/food_sample_item_status"
+        android:layout_weight="1"
+        android:src="@drawable/good" />
+
+</TableRow>

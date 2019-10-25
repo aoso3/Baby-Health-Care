@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/baby_prof_wall"
+                android:background="@drawable/cover_parent"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save"
+                    android:id="@+id/save_parent_prof_update"
+                    android:background="@android:color/transparent"
+                    android:textColor="#fff"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_above="@+id/parent_image" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:id="@+id/parent_image"
+                    android:src="@drawable/user_icon"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="5dp"/>
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/change_pic"
+                    android:id="@+id/change_parent_pic_btn"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/transparent"
+                    android:textColor="#fff"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/parent_image" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/baby_prof_wall"
+                android:padding="15dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="First name"
+                    android:id="@+id/textView2"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16dp"
+                    android:layout_gravity="left"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/parent_name_txt"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Last name"
+                    android:id="@+id/textView22"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16dp"
+                    android:layout_gravity="left"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/parent_last_name_txt"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/email"
+                    android:id="@+id/textView3"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16dp"
+                    android:layout_gravity="left"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/parent_email_txt"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/birth_date"
+                    android:id="@+id/textView4"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16dp"
+                    android:layout_gravity="left"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:ems="10"
+                    android:id="@+id/parent_birth_txt"
+                    android:focusable="false"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/gender"
+                        android:id="@+id/textView5"
+                        android:textColor="@color/colorTextSecondary"
+                        android:textIsSelectable="false"
+                        android:textSize="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/male"
+                            android:id="@+id/parent_prof_male_rad"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextSecondary"
+                            android:checked="false"
+                            android:layout_marginLeft="5dp" />
+
+                        <RadioButton
+                            android:layout_width="91dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/female"
+                            android:id="@+id/parent_prof_female_rad"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorTextSecondary"
+                            android:checked="false"
+                            android:layout_marginLeft="20dp" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

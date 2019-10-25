@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ground"
+    android:fillViewport="false">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/baby_prof_wall">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/baby_cover"
+                    android:src="@drawable/pink"
+                    android:scaleType="centerCrop"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:id="@+id/parent_image"
+                    android:src="@drawable/baby_placeholder"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FFF"
+                    android:layout_alignTop="@+id/save_baby_prof_btn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save"
+                    android:id="@+id/save_baby_prof_btn"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:id="@+id/cancle_baby_prof_btn"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change picture"
+                    android:id="@+id/change_baby_pic_btn"
+                    android:layout_below="@+id/parent_image"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/transparent"
+                    android:textColor="#fff" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/baby_prof_wall"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout"
+                android:padding="26dp"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="First name"
+                    android:id="@+id/textView6"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16dp"
+                    android:layout_gravity="left"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:theme="@style/Widget.AppCompat.ProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:textColor="@color/colorTextPrimary"
+                    android:id="@+id/baby_name_txt"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Last name"
+                    android:id="@+id/textView40"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16dp"
+                    android:layout_gravity="left"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:theme="@style/Widget.AppCompat.ProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:textColor="@color/colorTextPrimary"
+                    android:id="@+id/baby_last_name_txt"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/birth_date"
+                    android:id="@+id/textView7"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16dp"
+                    android:layout_gravity="left"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:theme="@style/AppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:ems="10"
+                    android:id="@+id/baby_birth_txt"
+                    android:textColor="@color/colorTextPrimary"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="left" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/gender"
+                        android:id="@+id/textView5"
+                        android:textColor="@color/colorTextSecondary"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:theme="@style/AppTheme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/male"
+                            android:id="@+id/baby_prof_male_rad"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/colorTextSecondary"
+                            android:checked="false" />
+
+                        <RadioButton
+                            android:theme="@style/AppTheme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/female"
+                            android:id="@+id/baby_prof_female_rad"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/colorTextSecondary"
+                            android:checked="false" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp"
+                    android:text="Delete"
+                    android:textColor="@color/white"
+                    android:background="@color/colorAccent"
+                    android:id="@+id/delete_baby"
+                    android:layout_below="@+id/baby_prof_wall"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/baby_prof_shoes"
+                android:layout_gravity="center"
+                android:src="@drawable/shoes_girl"
+                android:layout_alignWithParentIfMissing="false"
+                android:scaleType="fitCenter"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/linearLayout"
+                android:layout_marginBottom="-60dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

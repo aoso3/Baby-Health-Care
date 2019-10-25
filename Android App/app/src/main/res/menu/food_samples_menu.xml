@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_add_food_sample"
+        android:icon="@drawable/plus_ico"
+        android:title="Add Sample"
+        app:showAsAction="always"/>
+</menu>
