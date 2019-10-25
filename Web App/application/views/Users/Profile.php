@@ -344,6 +344,6 @@ $(document).ready(function(){
       }
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUG9tIY6ZYRi5aNq7Jtpniu1jsJ6pQJkg&libraries=places&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"
         async defer>
         </script>

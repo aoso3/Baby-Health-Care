@@ -170,7 +170,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCKpQEmkCuRUnSMs5cZCadBg18z6UYNK6U" />
+            android:value="Your_API_Key" />
 
         <activity android:name=".doctor_visit.DoctorVisitRecordActivity" />
         <activity
