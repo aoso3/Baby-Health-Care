@@ -1,0 +1,68 @@
+.doctor-sections-tabs span:hover,.fa-inverse:focus{
+padding: 10px;
+}
+.doctor-sections-tabs .fa-inverse:hover,.fa-inverse:focus{
+color: #a6ff98;
+}
+
+.doctor-sections-tabs li{
+  display: block;
+  
+    width: 65%;
+}
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+/*#login-background {
+    background-image: url('../img/login-body-backgruond.jpg');
+    
+}*/
+
+/*Login*/
+.login-wrap{
+	color: #447788;
+}
+/*#login-thumb {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+      background: #669966;
+  padding: 10px 10px;
+
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  
+	float: center;
+}*/
+#thumbnail-image{
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+	border-top-left-radius: 100%;
+  	border-top-right-radius: 100%;
+  	border-bottom-left-radius: 100%;
+  	border-bottom-right-radius: 100%;
+  	float: center;
+  	width: 40%;
+  	padding: 10px 00px 00px 00px;
+}

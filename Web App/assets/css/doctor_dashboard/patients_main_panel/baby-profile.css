@@ -1,0 +1,221 @@
+/*General*/
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:center;
+    margin-right:-4px;
+}
+/*Header*/
+
+
+/*body*/
+body{
+  font-family: 'Ruda', sans-serif;
+}
+/*
+body {
+    background: #b6b6b6;
+  }
+body.box { background-color:#B0B0B0; position: relative;}
+  .container { background-color: seashell;}
+*/
+/*child's info*/
+  .cover{
+    background: url("../../../images/Doctor_panel/cover.png") repeat-y;
+    background-attachment: fixed;
+  }
+  .child-pic {
+    position: relative;
+    margin-top: 160px;
+  }
+  .child-info{
+    color: #fff;
+    min-height: 100px;
+    padding: 1%;
+    box-shadow: 0px 0px 10px #212121;
+  }
+  #name {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  #birth {
+    color: #b2ebf2;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  /*nav sections*/
+.section-thumb{
+    padding-top: 54px;
+    padding-bottom: 54px;
+    width: 180px;
+    margin-top: 15%;
+  color: #ff6c45;
+  display: inline-block;
+  text-align: center;
+  border: 23px solid #ffd777;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #ffd777;
+    font-size: 110%;
+    font-weight: bold;
+  transition: all 0.7s ease 0s;
+}
+.section-thumb:hover{
+    text-align: center;
+    font-size: 145%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    border-radius: 20%;
+}
+
+  .ih-item.circle.effect11 .info{
+     background: #ff5252;
+  width: 170px;
+  height: 170px;
+  }
+  .ih-item.circle.effect11 .info p {
+  color: lemonchiffon;
+}
+.ih-item.circle {
+  position: relative;
+  width: 170px;
+  height: 170px;
+}
+.ih-item.circle .img{
+  position: relative;
+  width: 170px;
+  height: 170px;
+}
+.circle-tabs{
+  margin-top: 5%;
+  margin-left: 10%;
+}
+ .last-tab{
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-bottom:5%;
+}
+.tabs-row{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+  /**/
+  .menu{
+    margin-top: 10%;
+    margin-bottom:-150%;
+  }
+  .content{
+    margin-top: 10%;
+  }
+  /*Content*/
+  .sections-sidebar{
+    text-align: center;
+  }
+  .chart-box{
+    margin-top: 5%;
+border-radius: 20%;
+    background-color: white;
+  width: 100%;
+  }
+ .inputs{
+    margin-top: 5%;
+  }
+  .add-samples-btns{
+    width: 100%;
+    border-color: #ff5252;
+    background-color: white;
+    color: #ff5252;
+    margin-top: 7.5%;
+  }
+   .add-samples-btns:hover ,.add-samples-btns:active,.add-samples-btns:focus{
+    width: 100%;
+    background-color: #ff5252;
+    color: #fff;
+    border-color: #fff;
+  }  
+canvas{  box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);}
+
+/*Growth Starts*/
+.title{
+  margin-bottom: -.5%;
+  margin-top: -.05%;
+  text-align: center;
+}
+
+#search-input[type=text] {
+    width: 25%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+#search-input[type=text]:focus {
+    width: 100%;
+}
+/*Growth Ends*/
+
+
+/*Skills Starts*/
+
+/*Collapsible panel*/
+
+.panel-group {
+    margin-bottom: 6px;
+}
+.p{
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.panel-default{
+  width: 100%;
+}
+.fancy-collapse-panel .panel-heading{
+  width: 100%;
+}
+
+ .skill-title{
+      font-size: 100%;
+  color: white;
+}
+
+.fancy-collapse-panel .panel-heading a {
+padding: 12px 35px 12px 15px;
+display: inline-block;
+width: 100%;
+background-color: #EE556C;
+color: #ffffff;
+position: relative;
+text-decoration: none;
+}
+.fancy-collapse-panel .panel-heading a:after {
+font-family: "FontAwesome";
+content: "\f107";
+position: absolute;
+right: 20px;
+font-size: 20px;
+font-weight: 400;
+top: 50%;
+line-height: 1;
+margin-top: -10px;
+}
+
+.fancy-collapse-panel .panel-heading a.collapsed:after {
+content: "\f106";
+}
+.panel-body {
+  padding: 5px; 
+  text-align: center; 
+}
+.panel-body label {
+  margin-bottom: 3px; 
+  font-weight: bold;
+}
+
+/*Skills Ends*/

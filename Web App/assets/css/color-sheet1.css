@@ -1,0 +1,152 @@
+/*Theme Backgrounds*/
+.bg-theme {
+	background-color: #30304D;		/*Dark Blue*/
+}
+
+.bg-theme01 {
+	background-color: #5CC3E3;		/*Light Blue*/
+}
+
+.bg-theme02 {
+	background-color: #7BDEA4;		/*Light Green*/
+}
+
+.bg-theme03 {
+  background-color: #F8706C;		/*Red*/
+}
+
+.bg-theme04 {
+  background-color: #D992EB;		/*Purple*/
+}
+
+.btn-theme {
+  color: #fff;
+  background-color: #88ddaa;
+  border-color: #89deab;
+}
+/*Selection Colors*/
+::selection {
+
+    background: #D992EB;
+    color: #fff;
+}
+::-moz-selection {
+    background: #D992EB;
+    color: #fff;
+}
+
+body{
+	background-color:#f9f5f2;
+}
+
+/*Header*/
+.black-bg {
+    background: #5CC3E3;
+    border-bottom: 1px solid #30304D;
+}
+
+ul.top-menu > li > .logout {
+	border: 1px solid #F6706b !important;
+	background: #F8706C;
+}
+
+ul.top-menu > li > .logout:hover, ul.top-menu > li > .logout:focus {
+    border:1px solid #F6006f !important;
+    background-color: #DE6461 !important;
+   	border-color: #F6006f !important;
+    color: #fff !important;
+}
+
+ul.top-menu > li > a,ul.notify-row-list > li > a {
+color: #fff ; 
+}
+
+.notify-row-list > li > a:hover, .notify-row-list > li > a:focus {
+  background: transparent!important;  
+}
+
+.sidebar-toggle-box .fa-bars,.sidebar-toggle-box .fa-arrow-left {
+	color: #fff;
+}
+
+/*Side Nav Bar*/
+#sidebar {					
+    background: #30304D;   
+}
+ul.sidebar-menu li a {
+color: #5CC3E3;
+}
+#sidebar h4 {				/*Doctor's name*/
+	color: white;
+}
+#sidebar h5 {
+	color: #f2f2f2;			/*Tabs*/
+}
+ul.sidebar-menu li ul.sub li{
+    background: #30304D;
+}
+ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+background: #F8706C;
+/*
+color: #F8706C;
+*/
+color: #fff;
+}
+ul.sidebar-menu li a.active>.fa, ul.sidebar-menu li a:hover>.fa , ul.sidebar-menu li a.focus>.fa {
+/*background: #F8706C;
+/*
+color: #F8706C;
+*/
+color: #fff;
+*/
+}
+
+
+/*Footer*/
+.site-footer {
+    background: #68DFF0;
+    color: #fff;
+}
+.go-top {
+	background: transparent;
+}
+
+
+/*Buttons*/
+s
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active,
+.open .dropdown-toggle.btn-theme {
+  color: #fff;
+  background-color: #88ddaa;
+  border-color: #89deab;
+}
+.login-a{
+	color:#FF00FF;
+}
+.login-a:hover,
+.login-a:focus,
+.login-a:active{
+	color:#FF5555;
+}
+
+.doctor-sections-tabs .fa-inverse:hover,.fa-inverse:focus{
+color:#88ddaa;
+
+}
+/*Baby Profile*/
+.box{
+  background-color: #FFF4E2;
+}
+.thumb{
+	color:#447788;
+}
+.panel-heading{
+	background-color: #b16aa7;
+}
+.doctor-sections-tabs .panel-body{
+	background-color: #ffe26c;
+}
+

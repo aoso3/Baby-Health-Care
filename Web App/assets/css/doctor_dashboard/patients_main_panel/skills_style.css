@@ -1,0 +1,149 @@
+
+
+/* --------------------------------
+
+/* --------------------------------
+
+Pricing tables
+
+-------------------------------- */
+.cd-pricing {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.cd-pricing > li {
+  position: relative;
+  margin: 0 auto 2.5em;
+  background-color: #ffffff;
+  border-radius: .3em .3em .25em .25em;
+  box-shadow: 0 2px 8px rgba(2, 4, 5, 0.5);
+}
+.cd-pricing > li.empty-box {
+  box-shadow: none;
+}
+.cd-pricing > li.empty-box::after {
+  /* placeholder visible when .cd-form is open - in this case same color of the background */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f222b;
+}
+@media only screen and (min-width: 768px) {
+  .cd-pricing {
+    max-width: 1000px;
+  }
+  .cd-pricing > li {
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 0;
+  }
+  .cd-pricing > li:last-of-type {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-pricing > li {
+    width: 45.0%;
+    float: left;
+    margin: 2% 2%;
+  }
+}
+
+.cd-pricing-header {
+  padding: 1.3em 1em;
+  background-color: #95ac5f;
+  border-radius: .25em .25em 0 0;
+  box-shadow: inset 0 1px 0 #c1cfa2;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cd-pricing-header h2, .cd-pricing-header .cd-price {
+  line-height: 1.2;
+}
+.cd-pricing-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.15em;
+}
+.cd-pricing-header .cd-price {
+  display: inline-block;
+  font-weight: bold;
+}
+.cd-pricing-header .cd-price::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-pricing-header span {
+  float: left;
+}
+.cd-pricing-header span:nth-of-type(2) {
+  color: #c1cfa2;
+}
+.cd-pricing-header span:nth-of-type(2)::before {
+  content: '/';
+}
+@media only screen and (min-width: 768px) {
+  .cd-pricing-header h2 {
+    font-size: 2.6rem;
+  }
+}
+
+.cd-pricing-features {
+  padding: 2.8em 1em 2.5em;
+}
+.cd-pricing-features li {
+  line-height: 1.5;
+  margin-bottom: .4em;
+}
+.cd-pricing-features li:last-of-type {
+  margin-bottom: 0;
+}
+.cd-pricing-features em {
+  position: relative;
+  padding-left: 28px;
+}
+.cd-pricing-features em::before {
+  /* this is the icon (check or cross) next to the plan feature */
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 24px;
+  width: 24px;
+  background: url(../img/cd-icons-plan.svg) no-repeat -24px 0;
+}
+ /* background: url(../../../images/cd-icons-plan.svg) no-repeat -24px 0; */
+/* }  background: url('<?php echo base_url("assets/Images/cd-icons-plan.svg") ?>') no-repeat -24px 0; */
+.cd-pricing-features .available em::before {
+  background-position: 0 0;
+}
+
+.cd-pricing-footer {
+  padding-bottom: 1.7em;
+}
+.cd-pricing-footer a {
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+.empty-box .cd-pricing-footer a {
+  /* scale down to 0 the action button when sign up form is visible */
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}

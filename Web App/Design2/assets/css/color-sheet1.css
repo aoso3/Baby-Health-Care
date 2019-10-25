@@ -1,0 +1,58 @@
+.color1 .bg-theme{
+	color: #447788;
+}
+
+.color2 .bg-theme02{
+	color:#faf289 ;
+}
+
+.color3 .bg-theme03{
+	color:#59c2d6 ;
+}
+
+.color4 .bg-theme04{
+	color:#e798c2 ;
+}
+
+.color5 .bg-theme05{
+	color:#b7ade6 ;
+}
+
+.btn-theme {
+  color: #fff;
+  background-color: #88ddaa;
+  border-color: #89deab;
+}s
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active,
+.open .dropdown-toggle.btn-theme {
+  color: #fff;
+  background-color: #88ddaa;
+  border-color: #89deab;
+}
+.login-a{
+	color:#FF00FF;
+}
+.login-a:hover,
+.login-a:focus,
+.login-a:active{
+	color:#FF5555;
+}
+
+.doctor-sections-tabs .fa-inverse:hover,.fa-inverse:focus{
+color:#88ddaa;
+
+}
+.thumb{
+	color:#447788;
+}
+.panel-heading{
+	background-color: #b16aa7;
+}
+.doctor-sections-tabs .panel-body{
+	background-color: #ffe26c;
+}
+body{background-color:#fff; }
+.black-bg {background-color: #b16aa7;}

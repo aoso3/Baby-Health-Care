@@ -1,0 +1,254 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Notifications_model extends CI_Model {
+	function __construct() {
+		parent::__construct();
+
+		$this->db->trans_strict(FALSE);
+	}
+
+	function get_all_adv_notifications($id_user, $id_child) {
+		$this->db->trans_start();
+		$this->db->select('notification.id,
+                   notification_recipieant.is_seen,
+                   notification_recipieant.id_child,
+                   notification.additional_data,
+                   notification.creator_user_id,
+                   notification.creation_date,
+                   notification.title,
+                   notification.text,
+                   notification.img,
+                   notification_type.name AS type')
+		->from('notification_recipieant')
+		->join('notification', 'notification.id = notification_recipieant.notification_id')
+		->join('notification_type', 'notification_type.id = notification.type_id')
+		->where('name', 'new vaccination adv')
+		->where('recipient_user_id', $id_user)
+		->where('id_child', $id_child);
+		$notifications = $this->db->get()->result_array();
+		$this->db->trans_complete();
+
+		if ($this->db->trans_status() === FALSE) {
+			$sec_array = array("success" => "0", "message" => "Can not load data, please try again later");
+			return json_encode(array($sec_array));
+		} else {
+			$sec_array = array("success" => "1", "message" => "");
+			return json_encode(array($sec_array, $notifications));
+		}
+	}
+
+	function get_all_not_seen_confirmation_requests($id_user, $id_child) {
+		$this->db->trans_start();
+		$this->db->select('notification.id,
+                   notification_recipieant.is_seen,
+                   notification_recipieant.id_child,
+                   notification.additional_data,
+                   notification.creator_user_id,
+                   notification.creation_date,
+                   notification.title,
+                   notification.text,
+                   notification.img,
+                   notification_type.name AS type')
+		->from('notification_recipieant')
+		->join('notification', 'notification.id = notification_recipieant.notification_id')
+		->join('notification_type', 'notification.type_id = notification_type.id')
+		->join('child_vaccination', 'child_vaccination.id_child = notification_recipieant.id_child')
+		->where('name', 'vaccination added')
+		->where('recipient_user_id', $id_user)
+		->where('notification_recipieant.id_child', $id_child)
+		->where('child_vaccination.state', 'pending');
+		$notifications = $this->db->get()->result_array();
+		$this->db->trans_complete();
+
+		if ($this->db->trans_status() === FALSE) {
+			$sec_array = array("success" => "0", "message" => "Can not load data, please try again later");
+			return json_encode(array($sec_array));
+		} else {
+			$sec_array = array("success" => "1", "message" => "");
+			return json_encode(array($sec_array, $notifications));
+		}
+	}
+
+	function see_notification($id_notif, $id_user) {
+		$this->db->trans_start();
+		$this->db->where('notification_id', $id_notif)
+		     ->where('recipient_user_id', $id_user)
+		     ->update('notification_recipieant', array('is_seen' => '1', 'is_seen_date' => date('Y-m-d H:i:s')));
+		$this->db->trans_complete();
+
+		if ($this->db->trans_status() === FALSE) {
+			$sec_array = array("success" => "0", "message" => "");
+			return json_encode(array($sec_array));
+		} else {
+			$sec_array = array("success" => "1", "message" => "");
+			return json_encode(array($sec_array));
+		}
+	}
+
+	function delete_notification($id_child, $id_doctor) {
+		$this->db->select('n.id')
+		     ->from('notification_recipieant')
+		     ->join('notification n', 'notification_id = n.id AND n.type_id = 2')
+		     ->where('recipient_user_id', $id_doctor)
+		     ->where('id_child', $id_child);
+		$id_notif = $this->db->get()->result_array();
+
+		if (!empty($id_notif)) {
+			$this->db->where('id', $id_notif[0]['id'])
+			     ->delete('notification');
+		}
+	}
+
+	function add_vaccination_request_notification($user_id, $child_id, $id_adv) {
+		$this->db->trans_start();
+		$this->db->select('vaccination.name AS vac_name, id_doctor')
+		     ->from('vaccination_adv')
+		     ->join('vaccination', 'vaccination.id = vaccination_adv.id_vaccination')
+		     ->where('vaccination_adv.id', $id_adv);
+		$info = $this->db->get()->result_array()[0];
+
+		$this->db->select('*')
+		     ->from('notification_type')
+		     ->where('name', 'vaccination request');
+		$type = $this->db->get()->result_array()[0];
+
+		$type['text'] = $this->format_msg($type['text'], array('$vec_name'), array($info['vac_name']), true);
+
+		$notification = array('creator_user_id' => $user_id,
+			'additional_data'                      => $id_adv,
+			'type_id'                              => $type['id'],
+			'creation_date'                        => date('Y-m-d H:i:s'),
+			'title'                                => $type['title'],
+			'text'                                 => $type['text'],
+			'img'                                  => 'notification1.png');
+
+		$this->db->insert('notification', $notification);
+		$new_id = $this->db->insert_id();
+
+		$notification_recipieant = array('notification_id' => $new_id,
+			'recipient_user_id'                               => $info['id_doctor'],
+			'id_child'                                        => $child_id,
+			'is_seen'                                         => '0');
+
+		$this->db->insert('notification_recipieant', $notification_recipieant);
+		$new_id = $this->db->insert_id();
+
+		$this->db->select('notification_recipieant.is_seen,
+                   notification_recipieant.id_child,
+                   notification_recipieant.recipient_user_id,
+                   notification.additional_data,
+                   notification.creator_user_id,
+                   notification.creation_date,
+                   notification.title,
+                   notification.text,
+                   notification.img,
+                   notification.type_id')
+		->from('notification_recipieant')
+		->join('notification', 'notification.id = notification_recipieant.notification_id')
+		->where('notification_recipieant.id', $new_id);
+		$message = $this->db->get()->result_array()[0];
+		$this->db->trans_complete();
+
+		if ($this->db->trans_status() === FALSE) {
+			$sec_array = array("success" => "0", "message" => "");
+			return json_encode(array($sec_array));
+		} else {
+			$sec_array = array("success" => "1", "message" => "");
+			return json_encode(array($sec_array, $message));
+		}
+	}
+
+	function add_register_at_doctor_notification($user_id, $child_id, $id_request) {
+		$this->db->trans_start();
+		$this->db->select('id_doctor')
+		     ->from('child_doctors')
+		     ->where('id', $id_request);
+		$info = $this->db->get()->result_array()[0];
+
+		$this->db->select('first_name, last_name')
+		     ->from('users')
+		     ->where('id', $user_id);
+		$user      = $this->db->get()->result_array()[0];
+		$user_name = $user['first_name']." ".$user['last_name'];
+
+		$this->db->trans_start();
+		$this->db->select('first_name')
+		     ->from('child')
+		     ->where('child.id', $child_id);
+		$child = $this->db->get()->result_array()[0];
+
+		$this->db->select('*')
+		     ->from('notification_type')
+		     ->where('name', 'register at doctor');
+		$type         = $this->db->get()->result_array()[0];
+		$type['text'] = $this->format_msg($type['text'], array('$user_name', '$child_name'),
+			array($user_name, $child['first_name']), true);
+
+		$notification = array('creator_user_id' => $user_id,
+			'additional_data'                      => $id_request,
+			'type_id'                              => $type['id'],
+			'creation_date'                        => date('Y-m-d H:i:s'),
+			'title'                                => $type['title'],
+			'text'                                 => $type['text'],
+			'img'                                  => 'notification2.png');
+
+		$this->db->insert('notification', $notification);
+		$new_id = $this->db->insert_id();
+
+		$notification_recipieant = array('notification_id' => $new_id,
+			'recipient_user_id'                               => $info['id_doctor'],
+			'id_child'                                        => $child_id,
+			'is_seen'                                         => '0');
+
+		$this->db->insert('notification_recipieant', $notification_recipieant);
+		$new_id = $this->db->insert_id();
+
+		$this->db->select('notification_recipieant.is_seen,
+                   notification_recipieant.id_child,
+                   notification_recipieant.recipient_user_id,
+                   notification.additional_data,
+                   notification.creator_user_id,
+                   notification.creation_date,
+                   notification.title,
+                   notification.text,
+                   notification.img,
+                   notification.type_id')
+		->from('notification_recipieant')
+		->join('notification', 'notification.id = notification_recipieant.notification_id')
+		->where('notification_recipieant.id', $new_id);
+		$message = $this->db->get()->result_array()[0];
+		$this->db->trans_complete();
+
+		if ($this->db->trans_status() === FALSE) {
+			$sec_array = array("success" => "0", "message" => "");
+			return json_encode(array($sec_array));
+		} else {
+			$sec_array = array("success" => "1", "message" => "");
+			return json_encode(array($sec_array, $message));
+		}
+	}
+
+	private function format_msg($msg, $variabel, $value, $multiple = false) {
+		if (!$multiple) {
+			if (strpos($msg, $variabel) != false) {
+				$msg = str_replace($variabel, $value, $msg);
+			}
+			return $msg;
+		} else {
+			if (sizeof($variabel) == sizeof($value)) {
+				for ($i = 0; $i < sizeof($variabel); $i++) {
+					if (strpos($msg, $variabel[$i]) != false) {
+						$msg = str_replace($variabel[$i], $value[$i], $msg);
+					}
+				}
+
+				return $msg;
+			} else {
+
+				return false;
+			}
+		}
+	}
+}
+
+?>

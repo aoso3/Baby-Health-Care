@@ -1,0 +1,128 @@
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 25px 0;
+  border-radius: 15px;
+}
+table thead tr th {
+  vertical-align: middle;
+  text-align: left;
+  padding: 10px 0 8px 15px;
+  }
+table tbody tr:first-child td {
+  border-width: 1px 0 1px 0;
+}
+table tbody tr.ui-selected td, table tbody tr.ui-selected:hover td {
+  background: #efefef;
+}
+table tbody tr td {
+  /*Font*/
+  vertical-align: middle;
+  text-align: center;
+
+
+}
+table tbody tr td:first-child {
+  border-left-width: 1px;
+}
+table tbody tr td:last-child {
+  border-right-width: 1px;
+}
+table tbody tr td .toggle {
+  width: 62px;
+  height: 27px;
+  margin: auto;
+}
+table tbody tr td.output {
+  text-align: left;
+  margin: 0;
+  padding: 0 7px 0 5px;
+  position: relative;
+}
+table tbody tr td.output p {
+  padding: 20px;
+}
+table tbody tr td.output .intent {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 200px;
+  height: 100px;
+}
+table tbody tr td.output .options {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px;
+}
+table tbody tr td.output .options img {
+  margin: 0 3px;
+}
+
+table tbody tr:nth-child(odd) {
+
+}
+.rules tr:hover .first {
+  background: #ffffd3;
+  cursor: pointer;
+}
+table tfoot tr td {
+  border: 1px solid #ccc;
+  min-height: 25px;
+}
+
+
+.enable:active, .rating {
+  padding: 0;
+  text-align: center;
+}
+
+.enable:active img, .rating img {
+  margin-left: 2px;
+}
+
+.overflow {
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.filter {
+  -webkit-filter: grayscale(100%);
+}
+
+.companion {
+  display: none;
+  opacity: 1;
+  max-height: 0;
+
+  }
+  .companion.show {
+  display: block !important;
+  opacity: 0;
+  max-height: 100%;
+  }
+/*added*/
+.baby-face{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  float: center;
+    height: 2%;
+       width: auto;
+  }
+#NoteModal{
+  overflow: auto;
+}
+#NoteModal .modal-header{padding-top:5px; }
+#NoteModal .modal-content {
+margin: auto;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+.samples{
+  border-radius: 100%;
+  margin: auto;
+}
