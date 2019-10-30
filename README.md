@@ -4,7 +4,7 @@ Parents can provide information about their children using an android app and Do
 The two apps have real-time notification systems, rating system, and real-time charts to make it super easy for parents and doctors to interact with it.<br>
 
 Using:<br>
-Web App: Nodejs, Codeigniter, AngularJs, jQuery, HTML5, CSS3<br>
+Web App: Nodejs, Codeigniter, AngularJs, HTML, CSS3<br>
 Android App: Java<br>
 Database: Mysql, Sqlit<br>
 Communication: Socket io, AJAX<br>
