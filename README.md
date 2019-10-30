@@ -7,7 +7,7 @@ Using:<br>
 Web App: Nodejs, Codeigniter, AngularJs, jQuery, HTML5, CSS3<br>
 Android App: Java<br>
 Database: Mysql, Sqlit<br>
-communitcation: Socket io, AJAX<br>
+Communication: Socket io, AJAX<br>
 
 ![Alt text](Screenshots/w1.png?raw=true "1")
 ![Alt text](Screenshots/w2.png?raw=true "2")
